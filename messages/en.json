@@ -1,0 +1,40 @@
+{
+  "hero": {
+    "title": "We Build Digital Future",
+    "desc": "Premium software solutions for modern businesses",
+    "button": "Get Started"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "About Us",
+    "desc": "We build scalable digital products",
+    "mission": "Our mission is to deliver high-quality software with modern design, clean architecture, and cutting-edge technologies.",
+    "stats": {
+      "projects": "Projects Delivered",
+      "clients": "Happy Clients",
+      "years": "Years Experience",
+      "support": "Support"
+    }
+  },
+  "services": {
+    "title": "Our Services"
+  },
+  "contact": {
+    "title": "Contact Us"
+  },
+  "portfolio": {
+    "title": "Our Work",
+    "filters": {
+      "all": "All",
+      "ai": "AI",
+      "web": "Web"
+    },
+    "back": "Back to Portfolio"
+  }
+}
+
