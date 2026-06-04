@@ -1,8 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-import Button from '@/components/ui/Button'; // استدعاء الزرار المحترف اللي عملته!
+import { useLanguage } from '@/context/LanguageContext';
+import Button from '@/components/ui/Button';
 
 export function Footer() {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -12,64 +14,63 @@ export function Footer() {
         {/* الجزء العلوي: تقسيم القوائم */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           
-          {/* العمود الأول: الهوية والشعار */}
+          {/* Logo and Tagline */}
           <div className="flex flex-col gap-4">
             <h2 className="text-white text-2xl font-bold tracking-tight">
-              شَارِك<span className="text-blue-600">.</span>
+              Sharek<span className="text-blue-600">.</span>
             </h2>
             <p className="text-sm text-gray-400 leading-relaxed">
-              أي حاجة ممكن تتأجر - شارك. أول منصة تشاركية موثوقة في مصر لتأجير واستئجار الأغراض اليومية بكل أمان.
+              {(t as any).footer.tagline}
             </p>
           </div>
 
-          {/* العمود الثاني: أقسام التأجير الشائعة (مستوحاة من دراسة الجدوى) */}
+          {/* Popular Categories */}
           <div>
-            <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">أقسام شائعة</h3>
+            <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">{(t as any).footer.popularSections}</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/categories/photography" className="hover:text-white transition-colors">معدات التصوير والرحلات</Link></li>
-              <li><Link href="/categories/tools" className="hover:text-white transition-colors">أدوات المنزل والحدائق</Link></li>
-              <li><Link href="/categories/events" className="hover:text-white transition-colors">مستلزمات المناسبات</Link></li>
-              <li><Link href="/cities" className="hover:text-white transition-colors">مناطق التغطية (الإسكندرية • القاهرة • الجيزة)</Link></li>
+              <li><Link href="/categories/photography" className="hover:text-white transition-colors">{(t as any).footer.links.photography}</Link></li>
+              <li><Link href="/categories/tools" className="hover:text-white transition-colors">{(t as any).footer.links.tools}</Link></li>
+              <li><Link href="/categories/events" className="hover:text-white transition-colors">{(t as any).footer.links.events}</Link></li>
+              <li><Link href="/cities" className="hover:text-white transition-colors">{(t as any).footer.links.cities}</Link></li>
             </ul>
           </div>
 
-          {/* العمود الثالث: الأمان والدعم (طبقة الثقة) */}
+          {/* Security & Privacy */}
           <div>
-            <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">الأمان والخصوصية</h3>
+            <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">{(t as any).footer.security}</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/trust" className="hover:text-white transition-colors">نظام الحجز الآمن (Escrow)</Link></li>
-              <li><Link href="/kyc" className="hover:text-white transition-colors">التحقق من الهوية (KYC)</Link></li>
-              <li><Link href="/terms" className="hover:text-white transition-colors">الشروط والأحكام</Link></li>
-              <li><Link href="/support" className="hover:text-white transition-colors">مركز حل النزاعات والدعم</Link></li>
+              <li><Link href="/trust" className="hover:text-white transition-colors">{(t as any).footer.links.trust}</Link></li>
+              <li><Link href="/kyc" className="hover:text-white transition-colors">{(t as any).footer.links.kyc}</Link></li>
+              <li><Link href="/terms" className="hover:text-white transition-colors">{(t as any).footer.links.terms}</Link></li>
+              <li><Link href="/support" className="hover:text-white transition-colors">{(t as any).footer.links.support}</Link></li>
             </ul>
           </div>
 
-          {/* العمود الرابع: القائمة البريدية (استخدام الزرار بتاع علي) */}
+          {/* Newsletter */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-white font-semibold text-sm uppercase tracking-wider">النشرة البريدية</h3>
-            <p className="text-sm text-gray-400">اشترك لتصلك أحدث الأغراض المتاحة للتأجير بالقرب منك.</p>
+            <h3 className="text-white font-semibold text-sm uppercase tracking-wider">{(t as any).footer.newsletter}</h3>
+            <p className="text-sm text-gray-400">{(t as any).footer.newsletterDesc}</p>
             
             <form onSubmit={(e) => e.preventDefault()} className="flex flex-col sm:flex-row gap-2">
               <input 
                 type="email" 
-                placeholder="بريدك الإلكتروني" 
+                placeholder={`${(t as any).footer.emailPlaceholder}`} 
                 className="bg-gray-900 text-white placeholder-gray-500 px-4 py-2 rounded-md text-sm border border-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 flex-grow"
                 required
               />
-              {/* هنا استخدمنا المكون بتاعك وباسلوب الـ sm للحجم والـ primary للون */}
               <Button variant="primary" size="sm" type="submit" className="whitespace-nowrap">
-                اشترك الآن
+                {(t as any).footer.subscribe}
               </Button>
             </form>
           </div>
 
         </div>
 
-        {/* الجزء السفلي: الحقوق وقنوات التواصل */}
+        {/* Footer Bottom: Rights and Contact */}
         <div className="border-t border-gray-900 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
-          <p>© {currentYear} منصة شارك (Sharek Marketplace). جميع الحقوق محفوظة.</p>
+          <p>{(t as any).footer.copyright.replace('{year}', currentYear)}</p>
           <div className="flex gap-4 text-gray-500">
-            <span className="text-gray-400">فريق عمل التطوير الداخلي • QA Passed</span>
+            <span className="text-gray-400">Internal Development Team • QA Passed</span>
           </div>
         </div>
 

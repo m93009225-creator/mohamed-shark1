@@ -42,6 +42,76 @@
       "description": "The page you are looking for cannot be found. Please check the address or go back to the homepage.",
       "button": "Go Home"
     }
+  },
+  "categories": {
+    "title": "Browse by Category",
+    "description": "Find what you need easily through our diverse categories"
+  },
+  "categoryItems": {
+    "electronics": "Electronics",
+    "vehicles": "Vehicles",
+    "camping": "Camping & Trips",
+    "tools": "Tools & Equipment",
+    "fashion": "Fashion & Events",
+    "sports": "Sports & Fitness"
+  },
+  "categoryCounts": {
+    "electronics_count": "150+ items",
+    "vehicles_count": "45+ items",
+    "camping_count": "80+ items",
+    "tools_count": "120+ items",
+    "fashion_count": "200+ items",
+    "sports_count": "60+ items"
+  },
+  "footer": {
+    "tagline": "Anything can be rented - Share. The first reliable sharing platform in Egypt for renting and leasing everyday items safely.",
+    "popularSections": "Popular Categories",
+    "security": "Security & Privacy",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Subscribe to receive the latest items available for rent near you.",
+    "emailPlaceholder": "Your Email",
+    "subscribe": "Subscribe Now",
+    "copyright": "© {year} Sharek Platform. All rights reserved.",
+    "links": {
+      "photography": "Photography & Travel Equipment",
+      "tools": "Home & Garden Tools",
+      "events": "Event Supplies",
+      "cities": "Coverage Areas (Alexandria • Cairo • Giza)",
+      "trust": "Secure Booking System (Escrow)",
+      "kyc": "Identity Verification (KYC)",
+      "terms": "Terms & Conditions",
+      "support": "Dispute Resolution & Support Center"
+    }
+  },
+  "items": {
+    "item1": {
+      "title": "Sony Alpha A7 III Camera",
+      "category": "Electronics",
+      "owner": "Ahmed Ali",
+      "description": "Professional full-frame mirrorless camera for photography"
+    },
+    "item2": {
+      "title": "Trek Mountain Bike",
+      "category": "Sports",
+      "owner": "Sarah Mohamed",
+      "description": "High-performance mountain bike with advanced suspension"
+    },
+    "item3": {
+      "title": "Family Camping Tent",
+      "category": "Camping",
+      "owner": "Yaseen Hassan",
+      "description": "Spacious family tent with waterproof design"
+    }
+  },
+  "featuredItems": {
+    "title": "Featured Items",
+    "description": "Check out our most popular items available for rent",
+    "viewAll": "View All",
+    "perDay": "/ day",
+    "bookNow": "Book Now",
+    "available": "Available",
+    "unavailable": "Unavailable",
+    "rating": "Rating"
   }
 }
 
