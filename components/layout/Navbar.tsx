@@ -16,20 +16,14 @@ export default function Navbar() {
     { label: t.nav.home, href: "#home", id: "home" },
     { label: t.nav.about, href: "#about", id: "about" },
     { label: t.nav.services, href: "#services", id: "services" },
-    { label: (t as any).categories?.title || "Categories", href: "#categories", id: "categories" },
-    { label: (t as any).featuredItems?.title || "Featured", href: "#featured", id: "featured" },
     { label: t.nav.contact, href: "#contact", id: "contact" },
     { label: "Portfolio", href: "/portfolio", id: "portfolio" },
   ];
   const handleClick = (link: { label: string; href: string; id: string }) => {
     setActive(link.id);
 
-    if (link.href.startsWith("#")) {
-      if (window.location.pathname !== "/") {
-        router.push(`/${link.href}`);
-        return;
-      }
 
+    if (link.href.startsWith("#")) {
       const el = document.getElementById(link.id);
       if (el) {
         el.scrollIntoView({ behavior: "smooth" });
