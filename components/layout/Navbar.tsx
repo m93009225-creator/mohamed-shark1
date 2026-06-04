@@ -22,8 +22,12 @@ export default function Navbar() {
   const handleClick = (link: { label: string; href: string; id: string }) => {
     setActive(link.id);
 
-
     if (link.href.startsWith("#")) {
+      if (window.location.pathname !== "/") {
+        router.push(`/${link.href}`);
+        return;
+      }
+
       const el = document.getElementById(link.id);
       if (el) {
         el.scrollIntoView({ behavior: "smooth" });

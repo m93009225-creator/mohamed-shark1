@@ -35,6 +35,13 @@
       "web": "Web"
     },
     "back": "Back to Portfolio"
+  },
+  "errors": {
+    "notFound": {
+      "title": "Page not found",
+      "description": "The page you are looking for cannot be found. Please check the address or go back to the homepage.",
+      "button": "Go Home"
+    }
   }
 }
 
