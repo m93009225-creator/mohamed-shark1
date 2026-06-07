@@ -1,82 +1,115 @@
-import React from 'react';
+"use client";
+
 import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
-import Button from '@/components/ui/Button';
 
-export function Footer() {
+export default function Footer() {
   const { t } = useLanguage();
-  const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-950 text-gray-400 border-t border-gray-900">
-      <div className="max-w-7xl mx-auto px-4 py-12 md:py-16">
+    <footer className="bg-black text-zinc-400 border-t border-zinc-900 pt-16 pb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* الجزء العلوي: تقسيم القوائم */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        {/* شبكة القوائم الرئيسية */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           
-          {/* Logo and Tagline */}
-          <div className="flex flex-col gap-4">
-            <h2 className="text-white text-2xl font-bold tracking-tight">
-              Sharek<span className="text-blue-600">.</span>
-            </h2>
-            <p className="text-sm text-gray-400 leading-relaxed">
-              {(t as any).footer.tagline}
+          {/* العمود الأول: براند الشركة */}
+          <div className="md:col-span-1">
+            <span className="text-2xl font-bold text-white tracking-tight">
+              Novyra<span className="text-cyan-500">.</span>
+            </span>
+            <p className="mt-4 text-sm text-zinc-400 leading-relaxed">
+              {t.footer.brand_desc}
             </p>
           </div>
 
-          {/* Popular Categories */}
+          {/* العمود الثاني: الخدمات التقنية للشركة */}
           <div>
-            <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">{(t as any).footer.popularSections}</h3>
-            <ul className="space-y-2 text-sm">
-              <li><Link href="/categories/photography" className="hover:text-white transition-colors">{(t as any).footer.links.photography}</Link></li>
-              <li><Link href="/categories/tools" className="hover:text-white transition-colors">{(t as any).footer.links.tools}</Link></li>
-              <li><Link href="/categories/events" className="hover:text-white transition-colors">{(t as any).footer.links.events}</Link></li>
-              <li><Link href="/cities" className="hover:text-white transition-colors">{(t as any).footer.links.cities}</Link></li>
+            <h3 className="text-white font-semibold text-sm tracking-wider uppercase mb-4">
+              {t.footer.col_services}
+            </h3>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <Link href="/services" className="hover:text-cyan-400 transition-colors">
+                  {t.footer.services.webDevelopment}
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="hover:text-cyan-400 transition-colors">
+                  {t.footer.services.aiSolutions}
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="hover:text-cyan-400 transition-colors">
+                  {t.footer.services.mobileApps}
+                </Link>
+              </li>
+              <li>
+                <Link href="/portfolio" className="hover:text-cyan-400 transition-colors">
+                  {t.footer.services.uiuxDesign}
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Security & Privacy */}
+          {/* العمود الثالث: الروابط المؤسسية */}
           <div>
-            <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">{(t as any).footer.security}</h3>
-            <ul className="space-y-2 text-sm">
-              <li><Link href="/trust" className="hover:text-white transition-colors">{(t as any).footer.links.trust}</Link></li>
-              <li><Link href="/kyc" className="hover:text-white transition-colors">{(t as any).footer.links.kyc}</Link></li>
-              <li><Link href="/terms" className="hover:text-white transition-colors">{(t as any).footer.links.terms}</Link></li>
-              <li><Link href="/support" className="hover:text-white transition-colors">{(t as any).footer.links.support}</Link></li>
+            <h3 className="text-white font-semibold text-sm tracking-wider uppercase mb-4">
+              {t.footer.col_company}
+            </h3>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <Link href="/about" className="hover:text-cyan-400 transition-colors">
+                  {t.footer.company.aboutNovyra}
+                </Link>
+              </li>
+              <li>
+                <Link href="/portfolio" className="hover:text-cyan-400 transition-colors">
+                  {t.footer.company.portfolio}
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy" className="hover:text-cyan-400 transition-colors">
+                  {t.footer.company.privacyPolicy}
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" className="hover:text-cyan-400 transition-colors">
+                  {t.footer.company.termsAndConditions}
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Newsletter */}
-          <div className="flex flex-col gap-4">
-            <h3 className="text-white font-semibold text-sm uppercase tracking-wider">{(t as any).footer.newsletter}</h3>
-            <p className="text-sm text-gray-400">{(t as any).footer.newsletterDesc}</p>
-            
-            <form onSubmit={(e) => e.preventDefault()} className="flex flex-col sm:flex-row gap-2">
+          {/* العمود الرابع: النشرة البريدية المتطورة */}
+          <div>
+            <h3 className="text-white font-semibold text-sm tracking-wider uppercase mb-4">
+              {t.footer.col_newsletter}
+            </h3>
+            <p className="text-sm text-zinc-400 mb-4">
+              {t.footer.newsletter_desc}
+            </p>
+            <div className="flex flex-col gap-2">
               <input 
                 type="email" 
-                placeholder={`${(t as any).footer.emailPlaceholder}`} 
-                className="bg-gray-900 text-white placeholder-gray-500 px-4 py-2 rounded-md text-sm border border-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 flex-grow"
-                required
+                placeholder={t.footer.input_placeholder} 
+                className="bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-500/50 w-full"
               />
-              <Button variant="primary" size="sm" type="submit" className="whitespace-nowrap">
-                {(t as any).footer.subscribe}
-              </Button>
-            </form>
+              <button className="bg-cyan-600 hover:bg-cyan-500 text-white rounded-xl text-sm py-2.5 px-4 font-medium transition-colors w-full">
+                {t.footer.subscribe_btn}
+              </button>
+            </div>
           </div>
 
         </div>
 
-        {/* Footer Bottom: Rights and Contact */}
-        <div className="border-t border-gray-900 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
-          <p>{(t as any).footer.copyright.replace('{year}', currentYear)}</p>
-          <div className="flex gap-4 text-gray-500">
-            <span className="text-gray-400">Internal Development Team • QA Passed</span>
-          </div>
+        {/* السطر السفلي وحقوق الملكية لعام 2026 */}
+        <div className="pt-8 border-t border-zinc-900 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-zinc-500">
+          <p>{t.footer.rights}</p>
+          <p>{t.footer.team_status}</p>
         </div>
 
       </div>
     </footer>
   );
 }
-
-export default Footer;
