@@ -16,7 +16,7 @@ export default function Navbar() {
     { label: t.nav.home, href: "#home", id: "home" },
     { label: t.nav.about, href: "#about", id: "about" },
     { label: t.nav.services, href: "#services", id: "services" },
-    
+    { label: t.nav.faq, href: "#faq", id: "faq" },
     { label: t.nav.contact, href: "#contact", id: "contact" },
     { label: t.nav.portfolio, href: "/portfolio", id: "portfolio" },
   ];

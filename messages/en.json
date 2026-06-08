@@ -8,6 +8,7 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
+    "faq": "FAQ",
     "contact": "Contact",
     "portfolio": "Portfolio"
   },
@@ -121,6 +122,27 @@
     "title": "Featured Works",
     "description": "Discover how we help major companies and brands with innovative and sophisticated software solutions and web applications.",
     "viewAll": "View All Our Works"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": {
+      "services": {
+        "question": "What software services does Novyra offer?",
+        "answer": "We specialize in building advanced web applications (SaaS), premium corporate platforms, custom AI systems, and digital system design (UI/UX) using cutting-edge technologies to ensure speed and security."
+      },
+      "duration": {
+        "question": "How long does it typically take to complete a software project?",
+        "answer": "The duration varies based on complexity; premium corporate websites take 2 to 4 weeks, while large-scale software systems and custom web applications are divided into sprints spanning 1 to 3 months with continuous delivery."
+      },
+      "support": {
+        "question": "Do you provide technical support and maintenance after website delivery?",
+        "answer": "Absolutely. All our projects come with a free technical support period and quality assurance (QA Passed), plus flexible monthly maintenance plans for system upgrades, performance monitoring, and periodic data protection."
+      },
+      "tech-stack": {
+        "question": "What are the core technologies used in your projects?",
+        "answer": "We primarily rely on modern, ultra-fast software architectures like Next.js and React 19, with Tailwind CSS styling, Framer Motion animations, and advanced cloud databases that ensure high flexibility and full responsiveness."
+      }
+    }
   }
 }
 

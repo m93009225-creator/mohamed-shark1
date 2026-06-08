@@ -3,6 +3,10 @@
 import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
 
+
+
+
+
 export default function Footer() {
   const { t } = useLanguage();
 
@@ -102,7 +106,6 @@ export default function Footer() {
           </div>
 
         </div>
-
         {/* السطر السفلي وحقوق الملكية لعام 2026 */}
         <div className="pt-8 border-t border-zinc-900 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-zinc-500">
           <p>{t.footer.rights}</p>
