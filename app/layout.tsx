@@ -5,7 +5,6 @@ import { LanguageProvider } from "@/context/LanguageContext";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import React from "react";
-import Footer from '@/components/layout/Footer';
 import Navbar from '@/components/layout/Navbar';
 
 // Note: LanguageProvider updates <html dir/lang> at runtime.
@@ -39,8 +38,6 @@ export default function RootLayout({
             </motion.div>
           </AnimatePresence>
 
-          {/* 4. الـ Footer أيضاً داخل الـ Provider لتفادي نفس الخطأ */}
-          <Footer />
 
         </LanguageProvider>
       </body>

@@ -8,7 +8,8 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
-    "contact": "Contact"
+    "contact": "Contact",
+    "portfolio": "Portfolio"
   },
   "about": {
     "title": "About Us",
@@ -64,24 +65,27 @@
     "sports_count": "60+ items"
   },
   "footer": {
-    "tagline": "Anything can be rented - Share. The first reliable sharing platform in Egypt for renting and leasing everyday items safely.",
-    "popularSections": "Popular Categories",
-    "security": "Security & Privacy",
-    "newsletter": "Newsletter",
-    "newsletterDesc": "Subscribe to receive the latest items available for rent near you.",
-    "emailPlaceholder": "Your Email",
-    "subscribe": "Subscribe Now",
-    "copyright": "© {year} Sharek Platform. All rights reserved.",
-    "links": {
-      "photography": "Photography & Travel Equipment",
-      "tools": "Home & Garden Tools",
-      "events": "Event Supplies",
-      "cities": "Coverage Areas (Alexandria • Cairo • Giza)",
-      "trust": "Secure Booking System (Escrow)",
-      "kyc": "Identity Verification (KYC)",
-      "terms": "Terms & Conditions",
-      "support": "Dispute Resolution & Support Center"
-    }
+  "brand_desc": "Empowering businesses and enterprises with cutting-edge software solutions, premium web applications, and tailored AI systems built for the digital future.",
+  "col_services": "Our Services",
+  "col_company": "Company",
+  "col_newsletter": "Newsletter",
+  "newsletter_desc": "Subscribe to receive the latest tech insights and corporate updates from Novyra.",
+  "subscribe_btn": "Subscribe Now",
+  "input_placeholder": "Your Email",
+  "rights": "© 2026 Novyra. All rights reserved.",
+  "team_status": "Internal Development Team • QA Passed",
+  "services": {
+    "webDevelopment": "Web Development",
+    "aiSolutions": "AI & Smart Solutions",
+    "mobileApps": "Mobile Applications",
+    "uiuxDesign": "UI/UX Design Systems"
+  },
+  "company": {
+    "aboutNovyra": "About Novyra",
+    "portfolio": "Portfolio",
+    "privacyPolicy": "Privacy Policy",
+    "termsAndConditions": "Terms and Conditions"
+  }
   },
   "items": {
     "item1": {
@@ -112,6 +116,11 @@
     "available": "Available",
     "unavailable": "Unavailable",
     "rating": "Rating"
+  },
+  "featured": {
+    "title": "Featured Works",
+    "description": "Discover how we help major companies and brands with innovative and sophisticated software solutions and web applications.",
+    "viewAll": "View All Our Works"
   }
 }
 

@@ -8,7 +8,7 @@ import ar from "@/messages/ar.json";
 type Language = "en" | "ar";
 
 type LanguageContextValue = {
-  t: typeof import("@/messages/en.json");
+  t: typeof en;
   toggleLang: () => void;
   lang: Language;
 };
