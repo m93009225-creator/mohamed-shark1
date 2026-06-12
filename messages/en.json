@@ -10,7 +10,8 @@
     "services": "Services",
     "faq": "FAQ",
     "contact": "Contact",
-    "portfolio": "Portfolio"
+    "portfolio": "Portfolio",
+    "team": "Team"
   },
   "about": {
     "title": "About Us",
@@ -28,6 +29,48 @@
   },
   "contact": {
     "title": "Contact Us"
+  },
+  "team": {
+    "title": "Our Team",
+    "members": {
+      "mohamed": {
+        "name": "Mohamed Abdel karem",
+        "role": "Front-End TEAM"
+        
+      },
+      "ali": {
+        "name": "Ali Ashraf",
+        "role": "Front-End developer"
+      },
+      "hassan": {
+        "name": "Hassan Mohamed",
+        "role": "Mobile Application"
+      },
+      "amr": {
+        "name": "Amr Abd El-Hamide ",
+        "role": "Team security"
+      },
+      "abeer": {
+        "name": "Abeer Hisham ",
+        "role": "Call center"
+      },
+      "aya": {
+        "name": "Aya  Mosa",
+        "role": "Call center"
+      },
+      "hala": {
+        "name": "Hala Mahmoud ",
+        "role": "Front-End developer"
+      },
+      "mariam": {
+        "name": "Mariam Kamel ",
+        "role": "Backend Developer"
+      },
+      "ziad": {
+        "name": "Ziad M .Alsayyad",
+        "role": "CEO & founder"
+      }
+    }
   },
   "portfolio": {
     "title": "Our Work",

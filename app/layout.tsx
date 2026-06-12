@@ -18,7 +18,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="bg-black text-white" suppressHydrationWarning>
+      <body className="min-h-screen bg-black text-white overflow-x-hidden" suppressHydrationWarning>
         {/* 1. المظلة الأساسية لكل مكونات التطبيق */}
         <LanguageProvider>
           
